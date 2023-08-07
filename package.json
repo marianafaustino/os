@@ -1,0 +1,11 @@
+{
+  "name": "ordem-de-servico",
+  "version": "1.0.0",
+  "description": "Gerador de informações para visita técnica.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mariana Faustino",
+  "license": "ISC"
+}
