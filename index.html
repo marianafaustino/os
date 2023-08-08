@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <script src="index.js"></script>
+    
     <title>Ordem de Serviço</title>
 </head>
 <body>
@@ -16,7 +16,7 @@
     </header>
     <main>
         <div id="formulario">
-            <form>
+            <form id="form">
                 <label for="pf">PESSOA FÍSICA  </label>
                 <input type="radio" name="pessoa" id="pf" value="pf">
                 <label for="pj">PESSOA JURÍDICA </label>
@@ -36,19 +36,20 @@
                 <label for="solicitante">NOME DO SOLICITANTE:  </label>
                 <input type="text" id="solicitante">
                 <div>
-                    <button onclick="ordemServico.gerar()">Gerar</button>
-                    <button>Limpar</button>
+                    <button>Gerar</button>
+                    <button type="button">Limpar</button>
                 </div>
             </form>
         </div>
         
-        <div id="os">
+        <textarea id="os">
 
-        </div>
+        </textarea>
 
     </main>
     <footer>
         <p>Criado por Mariana Faustino</p>
     </footer>
+    <script src="index.js"></script>
 </body>
 </html>

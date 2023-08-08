@@ -1,16 +1,26 @@
 class OrdemServico{
 
-    gerar(){
-        let ordemServico = this.lerDados()
-       
+    constructor(){
+        const form = document.getElementById("form");
+
+        form.addEventListener("submit", this.gerar);
+    }
+
+    gerar(e){
+        e.preventDefault()
+        let ordemServico = new OrdemServico().lerDados()
+        
+
         document.getElementById('os')
-        .textContent = 'RECLAMAÇÃO:  '+ ordemServico.reclamacao
+        .value = 'RECLAMAÇÃO:  '+ ordemServico.reclamacao
         +'\n SUPORTE PRESTADO:  '+ ordemServico.suporte
         +'\nOBSERVAÇÕES:  ' + ordemServico.pessoa 
         +'\n----- \n REFERÊNCIA:  '+ ordemServico.referencia 
         + '\n TELEFONE DE CONTATO:  '+ ordemServico.numero1 + '/' + ordemServico.numero2  
         +'\n CÓDIGO DO CLIENTE:  '+ ordemServico.codigo 
         +'\n NOME DO SOLICITANTE: ' + ordemServico.solicitante
+
+    
         
     }
 
@@ -26,7 +36,7 @@ class OrdemServico{
         dados.suporte = document.getElementById('suporte').value || 'ONU INATIVA, VERIFICADO QUE O CONECTOR ESTAVA BEM CONECTADO, DESLIGADO E LIGADO A ONU MAS SEM SUCESSO. '
 
         const pessoa = document.querySelector('input[name="pessoa"]:checked')
-        if(pessoa.value === 'pj'){
+        if(pessoa?.value === 'pj'){
             dados.pessoa = 'CLIENTE CIENTE DA PASSIVIDADE DE COBRANÇA E DO PRAZO DE ATÉ 12 HORAS ÚTEIS.'
         } else{
             dados.pessoa = 'CLIENTE CIENTE DA PASSIVIDADE DE COBRANÇA E DO PRAZO DE ATÉ 2 DIAS ÚTEIS.'
@@ -44,4 +54,7 @@ class OrdemServico{
     }
 }
 
+
+
 var ordemServico = new OrdemServico()
+
