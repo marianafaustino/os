@@ -25,9 +25,9 @@ header{
 main{
     padding: 30px;
     width: 100vw;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
 form{
@@ -39,6 +39,11 @@ form{
 
 button{
     margin-top: 10px;
+}
+
+#os{
+    color: #fff;
+    line-height: 1.5;
 }
 
 footer{

@@ -15,23 +15,37 @@
         <h1>Gerador de Ordem de Serviço</h1>
     </header>
     <main>
-        <form>
-            <label for="referencia">REFERENCIA:  </label>
-            <input type="text" id="referencia">
+        <div id="formulario">
+            <form>
+                <label for="pf">PESSOA FÍSICA  </label>
+                <input type="radio" name="pessoa" id="pf" value="pf">
+                <label for="pj">PESSOA JURÍDICA </label>
+                <input type="radio" name="pessoa" id="pj" value="pj">
+                <label for="reclamacao">RECLAMAÇÃO:  </label>
+                <input type="text" id="reclamacao">
+                <label for="suporte">SUPORTE PRESTADO:  </label>
+                <input type="text" id="suporte">
+                <label for="referencia">REFERENCIA:  </label>
+                <input type="text" id="referencia">
+                <label for="numero1">TELEFONE 1:  </label>
+                <input type="tel" id="numero1">
+                <label for="numero2">TELEFONE 2:  </label>
+                <input type="tel" id="numero2">
+                <label for="codigo">CÓDIGO DO CLIENTE:</label>
+                <input type="number" id="codigo">
+                <label for="solicitante">NOME DO SOLICITANTE:  </label>
+                <input type="text" id="solicitante">
+                <div>
+                    <button onclick="ordemServico.gerar()">Gerar</button>
+                    <button>Limpar</button>
+                </div>
+            </form>
+        </div>
+        
+        <div id="os">
 
-            <label for="numero1">TELEFONE 1:  </label>
-            <input type="tel" id="numero1">
+        </div>
 
-            <label for="numero2">TELEFONE 2:  </label>
-            <input type="tel" id="numero2">
-
-            <label for="codigo">CÓDIGO DO CLIENTE:</label>
-            <input type="number" id="codigo">
-
-            <label for="solicitante">NOME DO SOLICITANTE:  </label>
-            <input type="text" id="solicitante">
-        </form>
-        <button>Gerar Ordem de Serviço</button>
     </main>
     <footer>
         <p>Criado por Mariana Faustino</p>
