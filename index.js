@@ -3,7 +3,7 @@ class OrdemServico{
     constructor(){
         const form = document.getElementById("form");
 
-        form.addEventListener("submit", this.gerar);
+        form.addEventListener("submit", this.gerar.bind(this))
     }
 
     gerar(e){
@@ -12,8 +12,9 @@ class OrdemServico{
         
 
         document.getElementById('os')
-        .value = 'RECLAMAÇÃO:  '+ ordemServico.reclamacao
-        +'\n SUPORTE PRESTADO:  '+ ordemServico.suporte
+        .value = 'PLANO:  '+ ordemServico.plano + 'M'
+        + '\nRECLAMAÇÃO:  '+ ordemServico.reclamacao
+        +'\nSUPORTE PRESTADO:  '+ ordemServico.suporte
         +'\nOBSERVAÇÕES:  ' + ordemServico.pessoa 
         +'\n----- \n REFERÊNCIA:  '+ ordemServico.referencia 
         + '\n TELEFONE DE CONTATO:  '+ ordemServico.numero1 + '/' + ordemServico.numero2  
@@ -27,6 +28,7 @@ class OrdemServico{
     lerDados(){
         let dados = {}
 
+        dados.plano = document.getElementById('plano').value
         dados.referencia = document.getElementById('referencia').value || ''
         dados.numero1 = document.getElementById('numero1').value 
         dados.numero2 = document.getElementById('numero2').value || ''
@@ -45,7 +47,20 @@ class OrdemServico{
         return dados
     }
 
+    copiar(){
+        var copyText = document.getElementById("os");
+
+        // Select the text field
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); // For mobile devices
+
+        // Copy the text inside the text field
+        navigator.clipboard.writeText(copyText.value);
+    }
+
     limpar(){
+        document.getElementById('reclamacao').value = ''
+        document.getElementById('suporte').value = ''
         document.getElementById('referencia').value = ''
         document.getElementById('numero1').value = ''
         document.getElementById('numero2').value = ''
@@ -53,8 +68,6 @@ class OrdemServico{
         document.getElementById('solicitante').value = ''
     }
 }
-
-
 
 var ordemServico = new OrdemServico()
 

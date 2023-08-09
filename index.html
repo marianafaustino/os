@@ -21,6 +21,8 @@
                 <input type="radio" name="pessoa" id="pf" value="pf">
                 <label for="pj">PESSOA JURÍDICA </label>
                 <input type="radio" name="pessoa" id="pj" value="pj">
+                <label for="reclamacao">PLANO:  </label>
+                <input type="text" id="plano">
                 <label for="reclamacao">RECLAMAÇÃO:  </label>
                 <input type="text" id="reclamacao">
                 <label for="suporte">SUPORTE PRESTADO:  </label>
@@ -32,12 +34,12 @@
                 <label for="numero2">TELEFONE 2:  </label>
                 <input type="tel" id="numero2">
                 <label for="codigo">CÓDIGO DO CLIENTE:</label>
-                <input type="number" id="codigo">
+                <input type="text" id="codigo">
                 <label for="solicitante">NOME DO SOLICITANTE:  </label>
                 <input type="text" id="solicitante">
-                <div>
-                    <button>Gerar</button>
-                    <button type="button">Limpar</button>
+                <div id="botoes">
+                    <button class="btn">Gerar</button>
+                    <button class="btn" type="button" onclick="ordemServico.limpar()">Limpar</button>
                 </div>
             </form>
         </div>
@@ -45,10 +47,12 @@
         <textarea id="os">
 
         </textarea>
+            <img id="copiar" onclick="ordemServico.copiar()"
+            src="img/file.png" alt="Copiar">
 
     </main>
     <footer>
-        <p>Criado por Mariana Faustino</p>
+        <p>Criado por &copy;Mariana Faustino 2023</p>
     </footer>
     <script src="index.js"></script>
 </body>
