@@ -59,6 +59,12 @@ class OrdemServico{
     }
 
     limpar(){
+        var radios = document.getElementsByName("pessoa");
+        for (var i = 0; i < radios.length; i++) {
+        radios[i].checked = false;
+        }
+
+        document.getElementById('plano').value = ''
         document.getElementById('reclamacao').value = ''
         document.getElementById('suporte').value = ''
         document.getElementById('referencia').value = ''
