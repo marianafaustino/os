@@ -58,6 +58,15 @@ class OrdemServico{
         navigator.clipboard.writeText(copyText.value);
     }
 
+    prazopf(){
+
+        navigator.clipboard.writeText("Entendi, nesse caso, somente um técnico no local para resolver o problema. Vou gerar uma ordem de serviço para o técnico ir ao local, e o prazo máximo para esse atendimento é de 2 dias úteis, porém esse é o prazo máximo, geralmente eles atendem bem antes. O suporte técnico é passível de cobrança, quando o problema é ocasionado pelo cliente, por exemplo: equipamento quebrado, mau uso, ou problema na rede interna. Será gerada a cobrança no valor de R$80,00 Reais a serem pagos via boleto com data para 5 dias após a visita. Mas fique tranquilo caso o problema seja referente a rede não é gerado cobrança.");
+    }
+	
+	prazopj(){
+		navigator.clipboard.writeText("Entendi, nesse caso, somente um técnico no local para resolver o problema. Vou gerar uma ordem de serviço para o técnico ir ao local, e o prazo máximo para esse atendimento é de 12 horas úteis, porém esse é o prazo máximo, geralmente eles atendem bem antes. O suporte técnico é passível de cobrança, quando o problema é ocasionado pelo cliente, por exemplo: equipamento quebrado, mau uso, ou problema na rede interna. Será gerada a cobrança no valor de R$80,00 Reais a serem pagos via boleto com data para 5 dias após a visita. Mas fique tranquilo caso o problema seja referente a rede não é gerado cobrança.");
+	}
+
     limpar(){
         var radios = document.getElementsByName("pessoa");
         for (var i = 0; i < radios.length; i++) {
