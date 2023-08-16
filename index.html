@@ -8,11 +8,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     
-    <title>Ordem de Serviço</title>
+    <title>Ordem de Serviço!</title>
+
+	<style>
+		textarea{
+	width:80%;
+	height:280px
+	}
+	</style>
+	
 </head>
 <body>
     <header>
-        <h1>Gerador de Ordem de Serviço</h1>
+        <h1>Gerador de Ordem de Serviço👨🏻‍🔧</h1>
     </header>
     <main>
         <div id="formulario">
@@ -38,10 +46,10 @@
                 <label for="solicitante">NOME DO SOLICITANTE:  </label>
                 <input type="text" id="solicitante">
                 <div id="botoes">
-                    <button class="btn">Gerar</button>
-                    <button class="btn" type="button" onclick="ordemServico.limpar()">Limpar</button>
-                    <button class="btn" type="button" onclick="ordemServico.prazopf()">INFORMAÇÃO PRAZO "PF"</button>
-					<button class="btn" type="button" onclick="ordemServico.prazopj()">INFORMAÇÃO PRAZO "PJ"</button>
+                <button class="btn">GERAR DADOS</button>
+                <button class="btn" type="button" onclick="ordemServico.limpar()">LIMPAR DADOS</button>
+                <button class="btn" type="button" onclick="ordemServico.prazopf()">INFORMAÇÃO PRAZO "PF"</button>
+		<button class="btn" type="button" onclick="ordemServico.prazopj()">INFORMAÇÃO PRAZO "PJ"</button>
                 </div>
             </form>
         </div>
